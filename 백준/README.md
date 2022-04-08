@@ -1,5 +1,7 @@
 # BOJ
 
+브론즈3 미는 중..
+
 [![Solved.ac
 프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=anothel)](https://solved.ac/anothel)
 
