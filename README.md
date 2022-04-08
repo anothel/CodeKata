@@ -1,1 +1,1 @@
-# BOJ_Hub
+# CodeKata
