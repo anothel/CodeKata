@@ -11,7 +11,7 @@ def main():
   col: int = 0
   for i in range(9):
     for j in range(9):
-      if pan[i][j] > maxValue:
+      if pan[i][j] >= maxValue:
         maxValue = pan[i][j]
         row = i + 1
         col = j + 1
