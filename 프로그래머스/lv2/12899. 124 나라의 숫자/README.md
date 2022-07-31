@@ -1,6 +1,6 @@
 # [level 2] 124 나라의 숫자 - 12899 
 
-[문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12899) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12899) 
 
 ### 성능 요약
 
