@@ -18,7 +18,7 @@ def solution():
 
     value: int = x * (a // x) + y
     while value <= b:
-        if a <= value <= b:
+        if a <= value:
             if answer:
                 second = True
                 break
