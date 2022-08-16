@@ -8,8 +8,7 @@ def solution():
         if x >= w:
             stdout.write("0\n")
             continue
-        answer: int = math.ceil(math.log(w / x) / math.log(2))
-        stdout.write("%d\n" % answer if answer != 0 else "1\n")
+        stdout.write("%d\n" % (math.ceil(math.log(w / x) / math.log(2))))
 
 
 if __name__ == "__main__":
