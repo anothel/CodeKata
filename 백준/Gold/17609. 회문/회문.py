@@ -1,32 +1,41 @@
-from sys import stdin, stdout
-import math
+from sys import stdin
 
 
-def isFalindrom(sen: str) -> int:
-    left: int = 0
-    right: int = len(sen) - 1
-
+def IsAlmostPal(s):
+    left = 0
+    right = len(s) - 1
     while left < right:
-        if sen[left] == sen[right]:
-            left += 1
-            right -= 1
+        if s[left] != s[right]:
+            return IsPal(s[left+1:right+1]) or IsPal(s[left:right])
+        left += 1
+        right -= 1
+    return False
+
+
+def IsPal(s):
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True
+
+
+def solution(arr):
+    for s in arr:
+        if IsPal(s) == True:
+            print("0")
+        elif IsAlmostPal(s) == True:
+            print("1")
         else:
-            if left < right - 1:
-                tmp: str = sen[:right] + sen[right + 1:]
-                if tmp == tmp[::-1]:
-                    return 1
-            if left + 1 < right:
-                tmp: str = sen[:left] + sen[left + 1:]
-                if tmp == tmp[::-1]:
-                    return 1
-            return 2
-    return 0
-
-
-def solution():
-    for _ in range(int(stdin.readline().rstrip())):
-        stdout.write("%d\n" % isFalindrom(stdin.readline().rstrip()))
+            print("2")
 
 
 if __name__ == "__main__":
-    solution()
+    T = int(stdin.readline().strip())
+    arr = []
+    for _ in range(T):
+        arr.append(str(stdin.readline().strip()))
+    solution(arr)
